@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEAREBRAND Interactive Experience | Zippy Web</title>
+    <title>WEAREBRAND Cinematic VFX | Zippy Web</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body, html { width: 100%; height: 500vh; background: #020204; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; color: #ffffff; overflow-x: hidden; scroll-behavior: smooth; }
+        body, html { width: 100%; height: 500vh; background: #010103; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; color: #ffffff; overflow-x: hidden; scroll-behavior: smooth; }
         #canvas-container { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 1; pointer-events: none; }
         
-        .grid-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 2; pointer-events: none; background: radial-gradient(circle at center, transparent 30%, rgba(2,2,4,0.8) 100%), linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px); background-size: 100% 100%, 60px 60px, 60px 60px; }
+        .grid-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 2; pointer-events: none; background: radial-gradient(circle at center, transparent 20%, rgba(1,1,3,0.85) 100%), linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px); background-size: 100% 100%, 50px 50px, 50px 50px; }
         
         .scroll-container { position: relative; z-index: 10; width: 100%; }
         .section { height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 8vw; pointer-events: none; }
         
-        .badge { display: inline-block; border: 1px solid rgba(255,255,255,0.25); padding: 6px 16px; border-radius: 30px; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; background: rgba(255,255,255,0.04); backdrop-filter: blur(20px); margin-bottom: 1.2rem; color: #e2e8f0; }
-        h1 { font-size: clamp(2.8rem, 6.5vw, 5.5rem); font-weight: 200; line-height: 1.0; letter-spacing: -0.04em; text-transform: uppercase; background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.3) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        p { color: rgba(255,255,255,0.65); font-size: clamp(0.9rem, 1.8vw, 1.1rem); max-width: 480px; line-height: 1.7; margin-top: 1.2rem; font-weight: 300; }
+        .badge { display: inline-block; border: 1px solid rgba(255,255,255,0.2); padding: 6px 16px; border-radius: 30px; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); margin-bottom: 1.2rem; }
+        h1 { font-size: clamp(2.8rem, 6.5vw, 5.5rem); font-weight: 200; line-height: 1.0; letter-spacing: -0.04em; text-transform: uppercase; background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        p { color: rgba(255,255,255,0.6); font-size: clamp(0.9rem, 1.8vw, 1.1rem); max-width: 480px; line-height: 1.7; margin-top: 1.2rem; font-weight: 300; }
         
         .align-right { align-items: flex-end; text-align: right; }
         .align-center { align-items: center; text-align: center; }
 
-        .card-preview { border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); border-radius: 16px; padding: 2rem; margin-top: 2rem; max-width: 420px; text-align: left; }
-        .card-preview h3 { font-size: 1.2rem; font-weight: 400; margin-bottom: 0.5rem; letter-spacing: 0.05em; }
+        .vfx-card { border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.02); backdrop-filter: blur(25px); border-radius: 16px; padding: 2rem; margin-top: 2rem; max-width: 440px; text-align: left; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .vfx-card h3 { font-size: 1.1rem; font-weight: 400; letter-spacing: 0.1em; color: #f59e0b; }
 
         .hud-overlay { position: fixed; top: 2rem; left: 3rem; right: 3rem; display: flex; justify-content: space-between; align-items: center; z-index: 20; pointer-events: none; }
         .hud-brand { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; }
@@ -38,54 +38,49 @@
     <div class="grid-overlay"></div>
 
     <div class="hud-overlay">
-        <div class="hud-brand">WEAREBRAND // ZIPPY LABS</div>
+        <div class="hud-brand">ZIPPY VFX ENGINE // WEAREBRAND</div>
         <div class="badge">GPU GLSL CORE 60 FPS</div>
     </div>
 
-    <div class="scroll-hint">SCROLL / SWIPE TO EXPLORE INTERACTIVE PANELS</div>
+    <div class="scroll-hint">SCROLL / SWIPE FOR CINEMATIC SEQUENCE</div>
 
     <div class="scroll-container">
-        <!-- Section 1: Hero Video Copy -->
         <div class="section">
-            <div class="badge">// 01 ORBITAL INTELLIGENCE</div>
-            <h1>Creative<br>Digital Expert</h1>
-            <p>High-end WebGL visual architecture, real-time particle physics, dynamic shaders, and spatial computing experiences.</p>
+            <div class="badge">// 01 ORBITAL CORE</div>
+            <h1>Cinematic<br>VFX Engine</h1>
+            <p>Real-time particle dynamic noise, continuous spatial camera flight, and organic WebGL mesh deformation.</p>
         </div>
 
-        <!-- Section 2: Compute Core Screen -->
         <div class="section align-right">
-            <div class="badge">// 02 COMPUTE_CORE</div>
-            <h1>Architectural<br>3D Rendering</h1>
-            <p>Custom vertex noise displacement and real-time ray-marched lighting matrices for interactive brand showcases.</p>
-            <div class="card-preview">
-                <h3>NVX-72 INTELLIGENCE LAYER</h3>
-                <p style="font-size: 0.85rem; margin-top: 0.3rem;">Real-time spatial node pipeline rendering at 60 FPS solid performance.</p>
+            <div class="badge">// 02 DYNAMIC WAVEFORM</div>
+            <h1>Architectural<br>Particle Mesh</h1>
+            <p>Independent multi-layer object motion driven by custom trigonometric vector math.</p>
+            <div class="vfx-card">
+                <h3>SPATIAL NODE DISPLACEMENT</h3>
+                <p style="font-size: 0.85rem; margin-top: 0.4rem; color: rgba(255,255,255,0.7);">Continuous vertex movement locked at smooth 60 FPS mobile speed.</p>
             </div>
         </div>
 
-        <!-- Section 3: Spatial Mesh Screen -->
         <div class="section">
-            <div class="badge">// 03 SPATIAL GEOMETRY</div>
-            <h1>Interactive<br>Mesh Shaders</h1>
-            <p>Responsive cursor vector physics allowing users to manipulate 3D geometric surfaces in real time.</p>
-            <div class="card-preview">
-                <h3>DYNAMIC DISPLACEMENT MATRIX</h3>
-                <p style="font-size: 0.85rem; margin-top: 0.3rem;">Zero asset lag with ultra-light mathematical WebGL shaders.</p>
+            <div class="badge">// 03 INTERACTIVE HUD</div>
+            <h1>Spatial Glass<br>Panels</h1>
+            <p>Responsive cursor parallax with multi-axis rotation matrices for dynamic UI cards.</p>
+            <div class="vfx-card">
+                <h3>VOLUMETRIC LIGHT MATRIX</h3>
+                <p style="font-size: 0.85rem; margin-top: 0.4rem; color: rgba(255,255,255,0.7);">Real-time ambient particle fog with dynamic opacity blending.</p>
             </div>
         </div>
 
-        <!-- Section 4: Project Showcase Screen -->
         <div class="section align-right">
-            <div class="badge">// 04 EXPERIENCE PLATFORM</div>
-            <h1>Luxury Web<br>Experiences</h1>
-            <p>Engineered for global luxury brands, tech startups, and digital production studios seeking Awwwards-level quality.</p>
+            <div class="badge">// 04 PRODUCTION READY</div>
+            <h1>High-End Brand<br>Showcase</h1>
+            <p>Engineered to deliver Awwwards-level interactive visual experiences directly on web browsers.</p>
         </div>
 
-        <!-- Section 5: Deployment & CTA -->
         <div class="section align-center">
             <div class="badge">// 05 AUTONOMOUS DEPLOYMENT</div>
-            <h1>Ready For<br>Production</h1>
-            <p>Seamless integration with Next.js, React, Three.js, and Vercel cloud infrastructure.</p>
+            <h1>Experience<br>Complete</h1>
+            <p>Seamlessly deployable on standard web hosting with full mobile optimization.</p>
         </div>
     </div>
 
@@ -100,62 +95,66 @@
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         container.appendChild(renderer.domElement);
 
-        // --- 3D Scene Objects (Exact WEAREBRAND Video Assets) ---
-
-        // 1. Kinetic Quantum Particle Sphere Core
-        const particleCount = 4000;
+        // --- 1. Dynamic Morphing Particle Sphere ---
+        const particleCount = 4500;
         const pGeo = new THREE.BufferGeometry();
-        const pPos = new Float32Array(particleCount * 3);
+        const initialPos = new Float32Array(particleCount * 3);
+        const currentPos = new Float32Array(particleCount * 3);
         const pColors = new Float32Array(particleCount * 3);
+
         const c1 = new THREE.Color(0x6366f1);
         const c2 = new THREE.Color(0xf59e0b);
 
         for (let i = 0; i < particleCount; i++) {
             const u = Math.random(), v = Math.random();
             const theta = u * 2.0 * Math.PI, phi = Math.acos(2.0 * v - 1.0);
-            const r = 1.7 + (Math.random() - 0.5) * 0.4;
-            pPos[i*3] = r * Math.sin(phi) * Math.cos(theta);
-            pPos[i*3+1] = r * Math.sin(phi) * Math.sin(theta);
-            pPos[i*3+2] = r * Math.cos(phi);
+            const r = 1.6 + (Math.random() - 0.5) * 0.3;
+
+            const x = r * Math.sin(phi) * Math.cos(theta);
+            const y = r * Math.sin(phi) * Math.sin(theta);
+            const z = r * Math.cos(phi);
+
+            initialPos[i*3] = x; initialPos[i*3+1] = y; initialPos[i*3+2] = z;
+            currentPos[i*3] = x; currentPos[i*3+1] = y; currentPos[i*3+2] = z;
 
             const mixColor = c1.clone().lerp(c2, Math.random());
             pColors[i*3] = mixColor.r; pColors[i*3+1] = mixColor.g; pColors[i*3+2] = mixColor.b;
         }
 
-        pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+        pGeo.setAttribute('position', new THREE.BufferAttribute(currentPos, 3));
         pGeo.setAttribute('color', new THREE.BufferAttribute(pColors, 3));
+
         const pMat = new THREE.PointsMaterial({ size: 0.016, vertexColors: true, transparent: true, opacity: 0.85, blending: THREE.AdditiveBlending });
         const sphere = new THREE.Points(pGeo, pMat);
         scene.add(sphere);
 
-        // 2. Orbital Ring Core
-        const ringGeo = new THREE.TorusGeometry(2.6, 0.006, 16, 120);
-        const ringMat = new THREE.MeshBasicMaterial({ color: 0xf59e0b, transparent: true, opacity: 0.5, wireframe: true });
-        const ring = new THREE.Mesh(ringGeo, ringMat);
-        scene.add(ring);
+        // --- 2. Floating Cyber Web Grid Plane ---
+        const gridGeo = new THREE.PlaneGeometry(12, 12, 30, 30);
+        const gridMat = new THREE.MeshBasicMaterial({ color: 0x6366f1, wireframe: true, transparent: true, opacity: 0.15 });
+        const gridPlane = new THREE.Mesh(gridGeo, gridMat);
+        gridPlane.rotation.x = -Math.PI / 2.5;
+        gridPlane.position.y = -3;
+        scene.add(gridPlane);
 
-        // 3. Floating Glass Panels (Scene 2 & 3 visuals)
+        // --- 3. Independent Floating Glass HUD Cards ---
         const cardGeo = new THREE.PlaneGeometry(2.4, 1.5);
         const cardMat = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true, transparent: true, opacity: 0.12 });
-        
+
         const card1 = new THREE.Mesh(cardGeo, cardMat);
         card1.position.set(3.2, -4, -2);
-        card1.rotation.y = -0.5;
         scene.add(card1);
 
         const card2 = new THREE.Mesh(cardGeo, cardMat);
         card2.position.set(-3.2, -8, -2);
-        card2.rotation.y = 0.5;
         scene.add(card2);
 
-        // --- Scroll Driven Camera Trajectory (Video Cinematic Flight) ---
+        // --- Motion Logic & Mouse Control ---
         let scrollProgress = 0;
         window.addEventListener('scroll', () => {
             const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
             scrollProgress = window.scrollY / maxScroll;
         });
 
-        // Mouse Parallax Interaction
         let mouseX = 0, mouseY = 0;
         document.addEventListener('mousemove', (e) => {
             mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
@@ -163,23 +162,39 @@
         });
 
         const clock = new THREE.Clock();
+
         function animate() {
             requestAnimationFrame(animate);
             const time = clock.getElapsedTime();
 
-            // Dynamic Camera Flight Path matching scroll sections
-            camera.position.x = Math.sin(scrollProgress * Math.PI * 2) * 2.2 + mouseX * 0.25;
-            camera.position.y = -scrollProgress * 12 - mouseY * 0.25;
-            camera.position.z = 5 - Math.sin(scrollProgress * Math.PI) * 1.8;
+            // Continuous Wave Deformation on Particles (VFX Effect)
+            const positions = sphere.geometry.attributes.position.array;
+            for (let i = 0; i < particleCount; i++) {
+                const ix = i * 3, iy = i * 3 + 1, iz = i * 3 + 2;
+                const wave = Math.sin(time * 2 + initialPos[ix] * 4) * 0.08;
+                positions[ix] = initialPos[ix] + wave;
+                positions[iy] = initialPos[iy] + wave;
+                positions[iz] = initialPos[iz] + wave;
+            }
+            sphere.geometry.attributes.position.needsUpdate = true;
 
-            // Rotation effects for 3D elements
-            sphere.rotation.y = time * 0.15 + scrollProgress * 5;
+            // Independent Object Animations
+            sphere.rotation.y = time * 0.2 + scrollProgress * 6;
             sphere.rotation.x = time * 0.1;
-            ring.rotation.x = time * 0.2 + scrollProgress * 3;
-            ring.rotation.y = time * 0.25;
 
-            card1.rotation.z = Math.sin(time * 0.5) * 0.05;
-            card2.rotation.z = Math.cos(time * 0.5) * 0.05;
+            gridPlane.position.z = (time * 0.5) % 2 - 1;
+            gridPlane.rotation.z = Math.sin(time * 0.2) * 0.1;
+
+            card1.rotation.y = -0.4 + Math.sin(time) * 0.1;
+            card1.rotation.z = Math.cos(time * 0.5) * 0.05;
+
+            card2.rotation.y = 0.4 + Math.cos(time) * 0.1;
+            card2.rotation.z = Math.sin(time * 0.5) * 0.05;
+
+            // Continuous Camera Sequence Path
+            camera.position.x = Math.sin(scrollProgress * Math.PI * 2) * 2.5 + mouseX * 0.3;
+            camera.position.y = -scrollProgress * 12 - mouseY * 0.3;
+            camera.position.z = 5 - Math.sin(scrollProgress * Math.PI) * 2;
 
             renderer.render(scene, camera);
         }
